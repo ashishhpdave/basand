@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Marksheet </title>
+</head>
+<body>
+
+<h1>Student Marksheet </h1>
+
+<div>Hindi :
+	<input type="number" name="" id="hindi" min="0" max="100">
+</div>
+
+<div>Math :
+	<input type="number" name="" id="math" min="0" max="100">
+</div>
+
+<div>Science :
+	<input type="number" name="" id="science" min="0" max="100">
+</div>
+
+<div>English :
+	<input type="number" name="" id="english" min="0" max="100">
+</div>
+
+<button onclick="persentage()">Calculate Percentage </button>
+
+<div id="result"></div>
+
+
+<script type="text/javascript">
+	
+ function persentage() {
+ 	const hindimark = parseFloat(document.getElementById('hindi').value);
+ 	const mathmark = parseFloat(document.getElementById('math').value);
+ 	const sciencemark = parseFloat(document.getElementById('science').value);
+ 	const englishmark = parseFloat(document.getElementById('english').value);
+ 
+ //Calculate total mark 
+
+ 	const totalMark = hindimark + mathmark + sciencemark + englishmark;
+ 	const Percentage = (totalMark/400)*100;
+
+ 	//Display Result 
+
+ 	const resultDiv = document.getElementById('result');
+ 	resultDiv.innerHTML = `
+
+ 	<h2>Result</h2
+ 	<p>Hindi: ${hindimark}</p>
+ 	<p>Math: ${mathmark}</p>
+ 	<p>science: ${sciencemark}</p>
+ 	<p>english: ${englishmark}</p>
+ 	<p>Total Marks: ${totalMark}</p>
+ 	<p>Percentage: ${persentage.parseFloat(2)}%</p>
+ 	`;
+
+ }
+
+</script>
+</body>
+</html>
